@@ -1,0 +1,53 @@
+.long-shadow(@first-color: rgb(40, 50, 62); @second-color: rgb(62, 52, 85)) {
+  /*box-shadow: @first-color 1px 1px,
+    @first-color 2px 2px,
+    @first-color 3px 3px,
+    @first-color 4px 4px,
+    @first-color 5px 5px,
+    @first-color 6px 6px,
+
+    @second-color 7px 7px,
+    @second-color 8px 8px,
+    @second-color 9px 9px,
+    @second-color 10px 10px,
+    @second-color 11px 11px;
+*/
+  text-shadow: @first-color 1px 1px,
+    @first-color 2px 2px,
+    @first-color 3px 3px,
+    @first-color 4px 4px,
+
+    @second-color 5px 5px,
+    @second-color 6px 6px,
+    @second-color 7px 7px,
+    @second-color 8px 8px;
+}
+
+html {
+}
+
+.text-head {
+  font-family: RobotoDraft;
+  font-weight: 300;
+  font-size: 64px;
+}
+.title {
+  position: relative;
+  top: 20%;
+  left: -1%;
+  .long-shadow;
+  font-family: Pacifico, "Permanent Marker", RobotoDraft, Roboto, "Helvetice Neue", Helvetica;
+  font-size: @font-size-h1 + 12px;
+}
+.card {
+  display: block;
+  background-color: white;
+  padding: 2em;
+}
+.text-light-weight {
+  font-weight: 300;
+}
+
+#feature-column-2 {
+  background-image:url(/images/icon.svg);
+}

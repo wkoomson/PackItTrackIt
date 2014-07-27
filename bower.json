@@ -1,0 +1,19 @@
+{
+  "name": "PackItTrackIt",
+  "version": "0.0.0",
+  "authors": [
+    "anonymous node/sails user"
+  ],
+  "moduleType": [
+    "globals"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "angular": "~1.2.18",
+    "restangular": "~1.4.0",
+    "angular-ui-router": "~0.2.10",
+    "angular-classy": "~0.4.2",
+    "polymer": "Polymer/polymer#~0.3.4",
+    "paper-elements": "Polymer/paper-elements#~0.3.4"
+  }
+}

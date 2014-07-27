@@ -1,0 +1,37 @@
+doctype html
+html
+  head
+    title= title
+
+    // Viewport mobile tag for sensible mobile support
+    meta(name="viewport",content="width=device-width, initial-scale=1, maximum-scale=1")
+    meta(name="mobile-web-app-capable", content="yes")
+    meta(name="apple-mobile-web-app-capable", conent="yes")
+
+    //Polymer shit
+    script(src="vendor/platform/platform.js")
+    link(rel="import", href="vendor/core-elements/core-elements.html")
+    link(rel="import", href="vendor/paper-elements/paper-elements.html")
+
+    //EXTERNAL RESOURCES
+    link(href="http://fonts.googleapis.com/css?family=Permanent+Marker|Pacifico|RobotoDraft:regular,bold,italic,thin,light,bolditalic,black,medium&lang=en",rel='stylesheet',type='text/css')
+    // STYLES
+    link(rel="stylesheet", href="/styles/importer.css")
+    link(rel="stylesheet", href="/styles/stylesheet.css")
+    // STYLES END
+    block styles 
+
+    script(src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js")
+
+  body(ng-app="PackItTrackIt", unresolved)
+    block body
+
+    // A few optional dependencies, linked in order
+    // SCRIPTS
+    script(src="/vendor/angular/angular.min.js")
+    script(src="/vendor/lodash/dist/lodash.min.js")
+    script(src="/vendor/restangular/dist/restangular.min.js")
+    script(src="/vendor/angular-ui-router/release/angular-ui-router.min.js")
+    script(src="/app/app.js")
+    script(src="/app/components/sails-resource/sails-resource-service.js")
+    // SCRIPTS END
