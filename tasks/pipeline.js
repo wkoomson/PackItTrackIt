@@ -26,9 +26,10 @@ var jsFilesToInject = [
   'vendor/lodash/dist/lodash.min.js',
   'vendor/restangular/dist/restangular.min.js',
   'vendor/angular-ui-router/release/angular-ui-router.min.js',
-
+  'vendor/snap.svg/dist/snap.svg-min.js',
   'app/app.js',
-  'app/**/*.js'
+  'app/**/*.js',
+  'js/**/*.js'
 ];
 
 // Client-side HTML templates are injected using the sources below

@@ -1,0 +1,31 @@
+piti helps users keep track of their packages, by:
+
+  1. automatically gathering online bought items in one place
+    - Gathered through:
+      * Searching through recent email for pkg #s and bought products
+      * uSer manually adding pkg #s
+  2. displaying info about the packages that are in the user's queue
+    - Approximate Location
+    - Estimated Time of Arrival
+    - Product Name
+    - Shipper
+    - Retailer
+  3. FUTURE:: giving push notifications
+
+Ideally, the API will be developed first (backend), and then the webapps and
+mobile apps (frontends) will be developed second.
+
+API Use Case
+  Before, she can use the api, dev gets an apikey from me, which is used to
+  give access to the api.
+  1 user creates an account using:
+    built in OAuth
+    Google OAuth
+  2 user logs in to account
+  3 user adds an email account to piti account
+  4 user waits for pkgs to be gleaned
+    system returns pkgs
+  5 user views pkgs
+  6 user deletes pkgs
+  7 user adds packages
+  8 user logs out

@@ -70,67 +70,43 @@ block styles
 block body
   
   div(ui-view)
-    core-scroll-header-panel(condenses, keepCondensedHeader, condensedHeaderHeight="72")
-      core-toolbar.medium-tall
-        paper-shadow(z="1")
-        div(flex)
-        paper-menu-button(icon="more-vert", halign="right", offset="0")
-          paper-item(label="Menu Item1")
-          paper-item(label="Menu Item2")
-          paper-item(label="Menu Item3")
-        core-icon.bottom.title-icon(src="/images/icon.svg", size="96", style="position:relative;top:20%;")
-        h1.bottom.title.shape PackItTrackIt
-        .bottom(flex)
-        paper-fab.bottom#loginFAB(icon="lock")
-        paper-menu-button-overlay(relatedTarget="loginFAB", halign="right")
-          paper-item(label="Menu Item1")
-          paper-item(label="Menu Item2")
-          paper-item(label="Menu Item3")
-        .bottom.col-sm-1
-      .content(content)
-        .container
-          .row
-            .col-sm-12.text-center
-              h1.text-head Let the obsessive package tracking begin!
-        section.container.card
-          paper-shadow(z="1")
-          .row
-            .col-sm-6.feature-column#feature-column-1
-              ul
-                h3.text-light-weight
-                  | Keep track of your packages from over 50 online retailers, including Amazon, Ebay, Zappos, and more
-                h3.text-light-weight
-                  | Receive status alerts each time your item reaches a new location
-                h3.text-light-weight
-                  | Add packages to your collection by tracking number
-            .col-sm-6.feature-column#feature-column-2
-              div
-
+    #q
+    .navbar.navbar-default
+      .container.navbar-container
+        .navbar-header
+          img.title-icon(src="/images/icon.svg")
+          span.title-text PackItTrackIt
+        //
+          paper-menu-button(icon="more-vert", halign="right", offset="0")
+            paper-item(label="Menu Item1")
+            paper-item(label="Menu Item2")
+            paper-item(label="Menu Item3")
+          paper-fab.bottom#loginFAB(icon="lock")
+          paper-menu-button-overlay(relatedTarget="loginFAB", halign="right")
+            paper-item(label="Menu Item1")
+            paper-item(label="Menu Item2")
+            paper-item(label="Menu Item3")
+    .content(content)
+      .container
+        .row
+          .col-sm-12.text-center
+            h1.text-head Let the obsessive package tracking begin!
+      section.container
+        .row
+          .col-sm-6.feature-column#feature-column-1
+            ul#feature-column-list
+              h2.text-light-weight
+                | Keep track of your packages from over 50 online retailers, including Amazon, Ebay, Zappos, and more
+              h2.text-light-weight
+                | Receive status alerts each time your item reaches a new location
+              h2.text-light-weight
+                | Add packages to your collection by tracking number
+          .col-sm-6.feature-column#feature-column-2
+            svg.feature#section-2-feature
   // TEMPLATES
   
   // TEMPLATES END
 
   script.
     // Equal Columns
-    $('.feature-column').height($('#feature-column-1').height());
-    $(window).resize(function() {
-      $('.feature-column').removeAttr('style');
-      //var highestCol = Math.max($('#feature-column-1').height(),$('#feature-column-2').height());
-      $('.feature-column').height($('#feature-column-1').height());
-    });
-    // custom transformation: scale header's title
-    var titleStyle = document.querySelector('.title').style;
-    var titleIcon = $('title-icon');
-    addEventListener('core-header-transform', function(e) {
-        var d = e.detail;
-        console.log(d);
-        var m = d.height - d.condensedHeight;
-        var scale = Math.max(0.75, (m - d.y) / (m / 0.25)  + 0.75);
-        titleStyle.webkitTransform = titleStyle.transform =
-                'scale(' + scale + ') translateZ(0)';
-        if (d.y < 128) {
-          $('.title-icon').attr("src","/images/icon.svg");
-        } else {
-          $('.title-icon').attr("src","/images/icon-onecolor.svg");
-        }
-    });
+    

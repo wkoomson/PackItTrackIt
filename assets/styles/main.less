@@ -15,10 +15,10 @@
   text-shadow: @first-color 1px 1px,
     @first-color 2px 2px,
     @first-color 3px 3px,
-    @first-color 4px 4px,
+    //@first-color 4px 4px,
 
-    @second-color 5px 5px,
-    @second-color 6px 6px,
+    //@second-color 5px 5px,
+    //@second-color 6px 6px,
     @second-color 7px 7px,
     @second-color 8px 8px;
 }
@@ -31,13 +31,16 @@ html {
   font-weight: 300;
   font-size: 64px;
 }
-.title {
-  position: relative;
-  top: 20%;
-  left: -1%;
+.title-text {
   .long-shadow;
   font-family: Pacifico, "Permanent Marker", RobotoDraft, Roboto, "Helvetice Neue", Helvetica;
-  font-size: @font-size-h1 + 12px;
+  font-size: @font-size-h1;
+  color: white;
+}
+.title-icon {
+  height: 48px;
+  vertical-align: bottom;
+  .img-rounded;
 }
 .card {
   display: block;
@@ -49,5 +52,21 @@ html {
 }
 
 #feature-column-2 {
-  background-image:url(/images/icon.svg);
+}
+
+.content {
+        margin-top: 20px;
+        padding: 10px 30px;
+}
+.navbar-header {
+  background-color: white;
+  padding: 0.5em 0em 1em 0em; 
+  border: none;
+}
+.navbar-container {
+  background-color: white;
+  border: none none solid none;
+  border-width: 1px;
+  border-color: rgba(255,255,255,0);
+  border-color:  linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(112,112,112,1) 25%, rgba(112,112,112,1) 75%, rgba(255,255,255,0) 100%);
 }
